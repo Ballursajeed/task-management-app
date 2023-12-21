@@ -1,1 +1,1 @@
-export const baseURI = `http://localhost:8000/api`
+export const baseURI = `https://task-management-app-rho-ecru.vercel.app`
