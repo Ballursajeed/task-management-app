@@ -1,1 +1,1 @@
-export const baseURI = `https://task-management-app-server-three.vercel.app/api`;
+export const baseURI = `https://task-management-app-server-three.vercel.app`;
