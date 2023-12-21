@@ -9,7 +9,13 @@ const app = express();
 const PORT = process.env.PORT || 8000
 
 //middleware
-app.use(cors())
+app.use(cors(
+ {
+   origin: ["https://task-management-app.vercel.app"],
+   methods: ["POST", "GET","PUT","DELETE"],
+   credentials: true
+ }
+));
 app.use(express.json())
 connectionDB()
 
