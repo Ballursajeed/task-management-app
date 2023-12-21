@@ -1,0 +1,6 @@
+import { Todo } from "../models/todo.model.js";
+
+const getTodos = async( req, res) => {
+  const todos = await Todo.find()
+  res.send(todos)
+}
