@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000
 //middleware
 app.use(cors(
  {
-   origin: ["https://task-management-app.vercel.app"],
+   origin: ["https://task-management-app-56id.vercel.app/"],
    methods: ["POST", "GET","PUT","DELETE"],
    credentials: true
  }
