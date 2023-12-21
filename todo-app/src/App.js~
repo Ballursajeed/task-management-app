@@ -47,7 +47,10 @@ function App() {
     ))}
    </div>
  </div>
-  {showPopup && <Popup setShowPopup={setShowPopup} popupContent={popupContent} />}
+  {showPopup && <Popup
+  setShowPopup={setShowPopup}
+   popupContent={popupContent}
+   setUpdateUI={setUpdateUI} />}
 </main>
   );
 }

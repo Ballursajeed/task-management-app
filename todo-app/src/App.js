@@ -33,7 +33,6 @@ function App() {
    <div className="input_holder">
     <input value={input} onChange={(e) => setInput(e.target.value)} type="text" placeholder="Add a ToDo...."/>
      <button onClick={saveTodo}>Add</button>
-     <input type="text"/>
    </div>
    <div className="list">
     {toDos.map(e1 => (<ToDo

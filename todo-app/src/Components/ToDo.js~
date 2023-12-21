@@ -4,7 +4,7 @@ import { RxCross1 } from "react-icons/rx";
 import axios from "axios";
 import { baseURI } from "../utils/constants.js";
 
-const ToDo = ({text, id, setUpdateUI, setShowPopup}) => {
+const ToDo = ({text, id, setUpdateUI, setShowPopup, setPopupContent}) => {
 
    const deleteTodo = () => {
       axios.delete(`${baseURI}/delete/${id}`).then(res => {
@@ -14,6 +14,7 @@ const ToDo = ({text, id, setUpdateUI, setShowPopup}) => {
    }
 
   const updateTodo = () => {
+  	setPopupContent({text, id});
   	setShowPopup(true)
 
   }

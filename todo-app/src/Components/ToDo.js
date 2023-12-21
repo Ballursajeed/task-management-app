@@ -11,6 +11,7 @@ const ToDo = ({text, id, setUpdateUI, setShowPopup, setPopupContent}) => {
                console.log(res.data);
                setUpdateUI((prevState) => !prevState);
       })
+      .catch((error) => console.log(error));
    }
 
   const updateTodo = () => {
