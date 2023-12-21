@@ -13,7 +13,6 @@ app.use(cors());
 app.use(express.json())
 connectionDB()
 
-
 app.get("/",(req,res) => {
     res.send("Hello from index.js")
 });
