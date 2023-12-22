@@ -19,8 +19,8 @@ function App() {
          .catch((err) => console.log(err))
 	}, [updateUI]);
 
-	const saveTodo = async() => {
-        await axios.post(`${baseURI}/api/save`,{todo:input}).then(res => {
+	const saveTodo = () => {
+         axios.post(`${baseURI}/api/save`,{todo:input}).then(res => {
                     console.log(res.data);
                     setUpdateUI((prevState) => !prevState)
                     setInput(" ")
