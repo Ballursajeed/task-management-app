@@ -13,13 +13,14 @@ function App() {
 	const [popupContent, setPopupContent] = useState({});
 
 	useEffect(() => {
+		console.log("useEffect triggered");
          axios.get(`${baseURI}/get`)
          .then((res) => setToDos(res.data))
          .catch((err) => console.log(err))
 	}, [updateUI]);
 
-	const saveTodo = () => {
-         axios.post(`${baseURI}/api/save`,{todo:input}).then(res => {
+	const saveTodo = async() => {
+        await axios.post(`${baseURI}/api/save`,{todo:input}).then(res => {
                     console.log(res.data);
                     setUpdateUI((prevState) => !prevState)
                     setInput(" ")

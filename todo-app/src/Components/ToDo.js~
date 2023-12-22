@@ -7,7 +7,7 @@ import { baseURI } from "../utils/constants.js";
 const ToDo = ({text, id, setUpdateUI, setShowPopup, setPopupContent}) => {
 
    const deleteTodo = () => {
-      axios.delete(`${baseURI}/delete/${id}`).then(res => {
+      axios.delete(`${baseURI}/api/delete/${id}`).then(res => {
                console.log(res.data);
                setUpdateUI((prevState) => !prevState);
       })

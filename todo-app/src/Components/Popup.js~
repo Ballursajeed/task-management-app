@@ -8,7 +8,7 @@ const Popup = ({setShowPopup, popupContent, setUpdateUI}) => {
  const [input, setInput] = React.useState(popupContent.text);
 
  const updateTodo = () => {
-       axios.put(`${baseURI}/update/${popupContent.id}`, {todo: input})
+       axios.put(`${baseURI}/api/update/${popupContent.id}`, {todo: input})
        .then((res) => { console.log(res.data);
            setUpdateUI((prevState) => !prevState);
            setShowPopup(false)
