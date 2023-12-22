@@ -10,7 +10,6 @@ const savaTodo = async( req, res) => {
 
   Todo.create({todo})
   .then(data => {
-            console.log("Todo Saved successfully in DB.....");
             res.status(201).send(data)
   })
   .catch((error) => {console.log("Error while saving todo:",error);
@@ -34,7 +33,6 @@ const updateTodo = async (req, res) => {
       return res.status(404).send({ msg: 'Todo not found' });
     }
 
-    console.log('Todo updated successfully in DB.....');
     res.send('Updated successfully');
   } catch (error) {
     console.log('Error while updating todo:', error);
@@ -47,7 +45,6 @@ const deleteTodo = async( req, res) => {
 	const { id } = req.params
 
   Todo.findByIdAndDelete(id).then(() => {
-            console.log("Todo Deleted successfully in DB.....");
             res.send("Deleted successfully")
 })
   .catch((error) => {console.log("Error while deleting todo:",error);

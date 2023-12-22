@@ -13,7 +13,6 @@ function App() {
 	const [popupContent, setPopupContent] = useState({});
 
 	useEffect(() => {
-		console.log("useEffect triggered");
          axios.get(`${baseURI}/api/get`)
          .then((res) => setToDos(res.data))
          .catch((err) => console.log(err))
